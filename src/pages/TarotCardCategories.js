@@ -6,8 +6,8 @@ const unsplashRootUrl = statics.unsplashRootUrl;
 const unsplashImageParameters = statics.unsplashImageParameters;
 
 const tarotCardCategories = [
-    {name: "Major Arcana", image: "1568821137008-6a947a8decfc"},
-    {name: "Minor Arcana", image: "1556739442-4c892bcbe8ba"}
+    {name: statics.MajorArcana, image: "1568821137008-6a947a8decfc"},
+    {name: statics.MinorArcana, image: "1556739442-4c892bcbe8ba"}
 ];
 
 class TarotCardCategories extends React.Component {
@@ -15,15 +15,14 @@ class TarotCardCategories extends React.Component {
         return (
             <SafeAreaView style={{height: "100%"}}>
                 <Text style={styles.headerText}>{statics.tarotCards}</Text>
-                <FlatList data={tarotCardCategories} renderItem={this.itemRenderer} keyExtractor={(item) => item.name}
-                          style={styles.flatList}/>
+                <FlatList data={tarotCardCategories} renderItem={this.itemRenderer} keyExtractor={(item) => item.name}/>
             </SafeAreaView>
         );
     }
 
     itemRenderer = ({item}) => {
         return (
-            <TouchableOpacity style={styles.itemWrapper}>
+            <TouchableOpacity style={styles.itemWrapper} onPress={()=>this.menuDispatcher(item.name)}>
                 <ImageBackground
                     source={{uri: unsplashRootUrl + item.image + unsplashImageParameters}}
                     style={styles.imageBackgroundWrapper}
@@ -33,6 +32,12 @@ class TarotCardCategories extends React.Component {
                 </ImageBackground>
             </TouchableOpacity>
         );
+    };
+
+    menuDispatcher = (item) => {
+        let route;
+        (item === statics.MinorArcana) ? route = statics.MinorArcanaCardsRoute : route = statics.MajorArcanaCardsRoute;
+        this.props.navigation.navigate(route);
     }
 }
 

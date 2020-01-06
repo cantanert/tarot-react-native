@@ -6,7 +6,17 @@ var enumStatics = {
     articles : "Articles",
     tarotCards : "Tarot Cards",
     majorArcanaCards : "Major Arcana Cards",
-    minorArcanaCards : "Minor Arcana Cards"
+    minorArcanaCards : "Minor Arcana Cards",
+
+    //routes
+    TarotCardsRoute: "TarotCardCategories",
+    MajorArcanaCardsRoute: "MajorArcanaCards",
+    MinorArcanaCardsRoute: "MinorArcanaCards",
+    ArticlesRoute: "Articles",
+
+    //main card categories
+    MajorArcana : "Major Arcana",
+    MinorArcana : "Minor Arcana"
 };
 
 export default enumStatics;
