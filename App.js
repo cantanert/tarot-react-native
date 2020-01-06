@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import TarotReadings from "./src/pages/TarotReadings";
+import Articles from "./src/pages/Articles";
 import TarotCardCategories from "./src/pages/TarotCardCategories";
 import MajorArcanaCards from "./src/pages/MajorArcanaCards";
 import Homepage from "./src/pages/Homepage";
@@ -23,7 +23,7 @@ const RootStack = createStackNavigator(
         TarotCards: TarotCardCategories,
         MajorArcanaCards: MajorArcanaCards,
         MinorArcanaCards: MinorArcanaCards,
-        TarotReadings: TarotReadings,
+        Articles: Articles,
     },
     {
         initialRouteName: "Home"

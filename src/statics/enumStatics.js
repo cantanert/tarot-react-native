@@ -3,7 +3,7 @@ var enumStatics = {
     unsplashImageParameters : "?auto=format&fit=crop&w=375&q=80",
 
     //headers
-    tarotReadings : "Tarot Readings",
+    articles : "Articles",
     tarotCards : "Tarot Cards",
     majorArcanaCards : "Major Arcana Cards",
     minorArcanaCards : "Minor Arcana Cards"

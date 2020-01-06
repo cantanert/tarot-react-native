@@ -5,7 +5,7 @@ import statics from "../statics/enumStatics";
 const unsplashRootUrl = "https://images.unsplash.com/photo-";
 const unsplashImageParameters = "?auto=format&fit=crop&w=375&q=80";
 
-const tarotReadings = [
+const articles = [
     {key: "What is 'Tarot', anyway?", image: "1565492206137-0797f1ca6dc6"},
     {key: "Why are some cards in suits, while others aren't?", image: "1565492206132-b48aa1ca7ac0"},
     {key: "What's in the 'Major Arcana' ?", image: "1515363524368-589ca770e0a1"},
@@ -19,7 +19,7 @@ class TarotReadings extends React.Component {
             <SafeAreaView style={{paddingBottom: 10}}>
                 <Text style={styles.headerText}>{statics.tarotReadings}</Text>
                 <FlatList
-                    data={tarotReadings}
+                    data={articles}
                     renderItem={this.itemRenderer}
                 />
             </SafeAreaView>

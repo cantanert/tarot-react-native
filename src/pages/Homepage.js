@@ -9,7 +9,7 @@ export default class Homepage extends React.Component {
             <SafeAreaView style={styles.homepageWrapper}>
                 <View style={{ flexDirection: "row", alignItems:"center" }}>
                     <Icon name="book-reader" style={{fontSize:30}}/>
-                    <Button title={statics.tarotReadings} onPress={()=> this.props.navigation.navigate("TarotReadings")}/>
+                    <Button title={statics.articles} onPress={()=> this.props.navigation.navigate("Articles")}/>
                 </View>
                 <View style={{ flexDirection: "row", alignItems:"center" }}>
                     <Icon name="bandcamp" style={{fontSize:30}}/>
