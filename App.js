@@ -20,9 +20,9 @@ export default function App() {
 const RootStack = createStackNavigator(
     {
         Home: Homepage,
-        TarotCardCategoriesRoute: TarotCardCategories,
-        MajorArcanaCardsRoute: MajorArcanaCards,
-        MinorArcanaCardsRoute: MinorArcanaCards,
+        TarotCards: TarotCardCategories,
+        MajorArcanaCards: MajorArcanaCards,
+        MinorArcanaCards: MinorArcanaCards,
         TarotReadings: TarotReadings,
     },
     {
