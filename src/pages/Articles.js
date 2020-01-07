@@ -6,8 +6,7 @@ import {
     FlatList,
     TouchableOpacity,
     ImageBackground,
-    SafeAreaView,
-    Dimensions
+    Dimensions,
 } from 'react-native';
 import statics from "../statics/enumStatics";
 import articles from "../statics/mockedArticleData"
@@ -21,12 +20,12 @@ const itemHeight = viewportHeight / 4;
 class TarotReadings extends React.Component {
     render() {
         return (
-            <SafeAreaView style={{paddingBottom: 10, flex:1}}>
+            <View>
                 <FlatList
                     data={articles}
                     renderItem={this.itemRenderer}
                 />
-            </SafeAreaView>
+            </View>
         );
     }
 

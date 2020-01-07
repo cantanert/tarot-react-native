@@ -11,7 +11,6 @@ class MajorArcanaCards extends React.Component {
     render() {
         return (
             <SafeAreaView>
-                <Text style={styles.headerText}>{statics.majorArcanaCards}</Text>
                 <FlatList
                     data={mockedMajorArcanaData.sampleData}
                     renderItem={this.itemRenderer}

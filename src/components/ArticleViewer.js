@@ -1,5 +1,12 @@
 import React from 'react';
-import {View, Text, StyleSheet, Dimensions, ImageBackground, ScrollView} from 'react-native';
+import {
+    View,
+    Text,
+    StyleSheet,
+    Dimensions,
+    ImageBackground,
+    ScrollView
+} from 'react-native';
 import statics from "../statics/enumStatics";
 
 const viewportHeight = Dimensions.get("window").height;
