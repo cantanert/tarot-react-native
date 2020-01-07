@@ -1,6 +1,20 @@
 import React from "react";
-import {FlatList, TouchableOpacity, ImageBackground, View, Text, StyleSheet, SafeAreaView} from "react-native";
+import {
+    FlatList,
+    TouchableOpacity,
+    ImageBackground,
+    View,
+    Text,
+    StyleSheet,
+    SafeAreaView,
+    Dimensions,
+    StatusBar
+} from "react-native";
 import statics from '../statics/enumStatics'
+
+const viewportHeight = Dimensions.get("window").height;
+const statusBarHeight = StatusBar.currentHeight;
+const itemHeight = (viewportHeight-80) / 2; //TODO get viewport height without navbar
 
 const unsplashRootUrl = statics.unsplashRootUrl;
 const unsplashImageParameters = statics.unsplashImageParameters;
@@ -12,17 +26,15 @@ const tarotCardCategories = [
 
 class TarotCardCategories extends React.Component {
     render() {
+        console.log(statusBarHeight);
         return (
-            <SafeAreaView style={{height: "100%"}}>
-                <Text style={styles.headerText}>{statics.tarotCards}</Text>
                 <FlatList data={tarotCardCategories} renderItem={this.itemRenderer} keyExtractor={(item) => item.name}/>
-            </SafeAreaView>
         );
     }
 
     itemRenderer = ({item}) => {
         return (
-            <TouchableOpacity style={styles.itemWrapper} onPress={()=>this.menuDispatcher(item.name)}>
+            <TouchableOpacity onPress={() => this.menuDispatcher(item.name)} style={{height:itemHeight}}>
                 <ImageBackground
                     source={{uri: unsplashRootUrl + item.image + unsplashImageParameters}}
                     style={styles.imageBackgroundWrapper}
@@ -42,22 +54,12 @@ class TarotCardCategories extends React.Component {
 }
 
 const styles = StyleSheet.create({
-    itemWrapper: {
-        justifyContent: "center"
-    },
     imageBackgroundImageStyles: {
         resizeMode: "cover",
-        borderRadius: 10
     },
     imageBackgroundWrapper: {
         width: "100%",
-        height: 200,
-        marginBottom: 10
-    },
-    headerText: {
-        fontSize: 25,
-        fontWeight: "bold",
-        paddingBottom: 10
+        flex:1
     },
     itemText: {
         color: "white",
@@ -73,7 +75,6 @@ const styles = StyleSheet.create({
         height: "100%",
         width: "100%",
         position: "absolute",
-        borderRadius: 10
     },
 });
 

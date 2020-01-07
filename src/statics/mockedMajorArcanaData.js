@@ -4,7 +4,7 @@ const imageUrlRoot = statics.unsplashRootUrl;
 const imageParameters = statics.unsplashImageParameters;
 const sampleImageID = "1576011710428-e421a5ad7619";
 
-const majorArcanaData = {
+const mockedMajorArcanaData = {
     sampleData : [
         {name:"The Fool" ,image: imageUrlRoot + sampleImageID + imageParameters},
         {name:"The Magician" ,image: imageUrlRoot + sampleImageID + imageParameters},
@@ -30,4 +30,4 @@ const majorArcanaData = {
         {name:"The World" ,image: imageUrlRoot + sampleImageID + imageParameters}
     ]
 }
-export default majorArcanaData;
+export default mockedMajorArcanaData;

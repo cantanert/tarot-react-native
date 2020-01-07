@@ -1,12 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import Articles from "./src/pages/Articles";
-import TarotCardCategories from "./src/pages/TarotCardCategories";
-import MajorArcanaCards from "./src/pages/MajorArcanaCards";
 import Homepage from "./src/pages/Homepage";
+import TarotCardCategories from "./src/pages/TarotCardCategories";
+import Articles from "./src/pages/Articles";
+import MajorArcanaCards from "./src/pages/MajorArcanaCards";
+import MinorArcanaCards from "./src/pages/MinorArcanaCards";
+import ArticleViewer from "./src/components/ArticleViewer";
 import {createAppContainer} from "react-navigation";
 import {createStackNavigator} from "react-navigation-stack";
-import MinorArcanaCards from "./src/pages/MinorArcanaCards";
 
 export default function App() {
     console.log("App Component is working now!");
@@ -24,6 +25,7 @@ const RootStack = createStackNavigator(
         MajorArcanaCards: MajorArcanaCards,
         MinorArcanaCards: MinorArcanaCards,
         Articles: Articles,
+        ArticleViewer: ArticleViewer
     },
     {
         initialRouteName: "Home"

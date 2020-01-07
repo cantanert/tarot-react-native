@@ -13,6 +13,7 @@ var enumStatics = {
     MajorArcanaCardsRoute: "MajorArcanaCards",
     MinorArcanaCardsRoute: "MinorArcanaCards",
     ArticlesRoute: "Articles",
+    ArticleViewer: "ArticleViewer",
 
     //main card categories
     MajorArcana : "Major Arcana",

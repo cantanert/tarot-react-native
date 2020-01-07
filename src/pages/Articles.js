@@ -1,23 +1,27 @@
 import React from 'react';
-import {Text, StyleSheet, View, FlatList, TouchableOpacity, ImageBackground, SafeAreaView} from 'react-native';
+import {
+    Text,
+    StyleSheet,
+    View,
+    FlatList,
+    TouchableOpacity,
+    ImageBackground,
+    SafeAreaView,
+    Dimensions
+} from 'react-native';
 import statics from "../statics/enumStatics";
+import articles from "../statics/mockedArticleData"
 
 const unsplashRootUrl = "https://images.unsplash.com/photo-";
 const unsplashImageParameters = "?auto=format&fit=crop&w=375&q=80";
 
-const articles = [
-    {key: "What is 'Tarot', anyway?", image: "1565492206137-0797f1ca6dc6"},
-    {key: "Why are some cards in suits, while others aren't?", image: "1565492206132-b48aa1ca7ac0"},
-    {key: "What's in the 'Major Arcana' ?", image: "1515363524368-589ca770e0a1"},
-    {key: "What's in the 'Minor Arcana' ?", image: "1565492206137-0797f1ca6dc6"},
-    {key: "A three-card spread how-to?", image: "1565492206132-b48aa1ca7ac0"},
-];
+const viewportHeight = Dimensions.get("window").height;
+const itemHeight = viewportHeight / 4;
 
 class TarotReadings extends React.Component {
     render() {
         return (
-            <SafeAreaView style={{paddingBottom: 10}}>
-                <Text style={styles.headerText}>{statics.tarotReadings}</Text>
+            <SafeAreaView style={{paddingBottom: 10, flex:1}}>
                 <FlatList
                     data={articles}
                     renderItem={this.itemRenderer}
@@ -28,16 +32,21 @@ class TarotReadings extends React.Component {
 
     itemRenderer = ({item}) => {
         return (
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.routeDispatcher(item)}>
                 <ImageBackground
                     source={{uri: unsplashRootUrl + item.image + unsplashImageParameters}}  /*TODO dynamic with BE, get images from response*/
                     imageStyle={styles.imageBackgroundImageStyles}
                     style={styles.imageBackgroundWrapper}>
-                    <Text style={styles.itemText}>{item.key}</Text>
+                    <Text style={styles.itemText}>{item.title}</Text>
                     <View style={styles.itemTextBadge}/>
                 </ImageBackground>
             </TouchableOpacity>
         );
+    }
+    routeDispatcher = (item) => {
+        this.props.navigation.navigate(statics.ArticleViewer,{
+           item: item
+        });
     }
 }
 
@@ -45,12 +54,10 @@ class TarotReadings extends React.Component {
 const styles = StyleSheet.create({
     imageBackgroundImageStyles: {
         resizeMode: "cover",
-        borderRadius: 10
     },
     imageBackgroundWrapper: {
         width: "100%",
-        marginBottom: 20,
-        height: 200,
+        height: itemHeight,
     },
     itemText: {
         color: "white",
@@ -66,12 +73,6 @@ const styles = StyleSheet.create({
         height: "100%",
         width: "100%",
         position: "absolute",
-        borderRadius: 10
-    },
-    headerText: {
-        fontSize: 25,
-        fontWeight: "bold",
-        paddingBottom: 10
     }
 });
 

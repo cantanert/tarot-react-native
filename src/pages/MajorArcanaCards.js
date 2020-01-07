@@ -1,6 +1,6 @@
 import React from 'react';
 import {Dimensions, Text, TouchableOpacity, FlatList, ImageBackground, StyleSheet, View, SafeAreaView} from 'react-native'
-import majorArcanaData from "../statics/majorArcanaData";
+import mockedMajorArcanaData from "../statics/mockedMajorArcanaData";
 import statics from "../statics/enumStatics";
 
 const numColumns = 3;
@@ -13,7 +13,7 @@ class MajorArcanaCards extends React.Component {
             <SafeAreaView>
                 <Text style={styles.headerText}>{statics.majorArcanaCards}</Text>
                 <FlatList
-                    data={majorArcanaData.sampleData}
+                    data={mockedMajorArcanaData.sampleData}
                     renderItem={this.itemRenderer}
                     keyExtractor={(item) => item.name}
                     numColumns={3}
