@@ -1,10 +1,12 @@
 [
   {
     "name": "Major Arcana",
-    "image": "1568821137008-6a947a8decfc"
+    "image": "1568821137008-6a947a8decfc",
+    "route": "MajorArcanaCards"
   },
   {
     "name": "Minor Arcana",
-    "image": "1556739442-4c892bcbe8ba"
+    "image": "1556739442-4c892bcbe8ba",
+    "route": "MinorArcanaCards"
   }
 ]
