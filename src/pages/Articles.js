@@ -9,7 +9,7 @@ import {
     Dimensions,
 } from 'react-native';
 import statics from "../statics/enumStatics";
-import articles from "../statics/mockedArticleData"
+const articles = require("../statics/mockedArticleData");
 
 const unsplashRootUrl = "https://images.unsplash.com/photo-";
 const unsplashImageParameters = "?auto=format&fit=crop&w=375&q=80";

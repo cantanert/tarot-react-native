@@ -1,31 +1,30 @@
 import React from 'react';
 import {Dimensions, Text, TouchableOpacity, FlatList, ImageBackground, StyleSheet, View, SafeAreaView} from 'react-native'
 import mockedMajorArcanaData from "../statics/mockedMajorArcanaData";
-import statics from "../statics/enumStatics";
 
 const numColumns = 3;
 const tileWidth = Dimensions.get("window").width / numColumns;
 
 
-export default class MinorArcanaCards extends React.Component {
+class MajorArcanaCards extends React.Component {
     render() {
         return (
-            <SafeAreaView>
+            <View>
                 <FlatList
                     data={mockedMajorArcanaData.sampleData}
                     renderItem={this.itemRenderer}
                     keyExtractor={(item) => item.name}
                     numColumns={3}
                 />
-            </SafeAreaView>
+            </View>
         );
     }
 
     itemRenderer = ({item}) => {
         return (
-            <TouchableOpacity style={styles.touchableArea}>
+            <TouchableOpacity>
                 <ImageBackground
-                    source={{uri: item.image}}
+                    source={item.image}
                     style={styles.imageBackgroundWrapper}
                     imageStyle={styles.imageBackgroundImageStyles}>
                     <Text style={styles.itemText}>{item.name}</Text>
@@ -38,31 +37,28 @@ export default class MinorArcanaCards extends React.Component {
 
 const styles = StyleSheet.create({
     imageBackgroundImageStyles: {
-        resizeMode: "cover",
+        resizeMode: "center",
     },
     imageBackgroundWrapper: {
         height: 200,
         width: tileWidth,
+        justifyContent: "center",
+        alignItems: "center"
     },
     itemText: {
         color: "white",
-        width: "100%",
-        fontSize: 20,
+        fontSize: 15,
+        fontWeight: "900",
         zIndex: 1,
         paddingLeft: 10,
-        paddingTop: 10
-    },
-    headerText: {
-        fontSize: 25,
-        fontWeight: "bold",
-        paddingBottom: 10
     },
     itemTextBadge: {
         backgroundColor: "black",
-        opacity: 0.5,
+        opacity: 0.6,
         height: "100%",
         width: "100%",
         position: "absolute",
-        borderRadius: 10
-    },
+    }
 });
+
+export default MajorArcanaCards;

@@ -11,18 +11,17 @@ import {
     StatusBar
 } from "react-native";
 import statics from '../statics/enumStatics'
+const tarotCardCategories = require("../statics/mockedTarotCardTypes");
 
+//dimensions API
 const viewportHeight = Dimensions.get("window").height;
 const statusBarHeight = StatusBar.currentHeight;
 const itemHeight = (viewportHeight-80) / 2; //TODO get viewport height without navbar
 
+//parsed image url parts
 const unsplashRootUrl = statics.unsplashRootUrl;
 const unsplashImageParameters = statics.unsplashImageParameters;
 
-const tarotCardCategories = [
-    {name: statics.MajorArcana, image: "1568821137008-6a947a8decfc"},
-    {name: statics.MinorArcana, image: "1556739442-4c892bcbe8ba"}
-];
 
 class TarotCardCategories extends React.Component {
     render() {

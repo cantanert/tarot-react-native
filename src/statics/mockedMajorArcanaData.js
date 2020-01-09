@@ -1,4 +1,3 @@
-import statics from "./enumStatics";
 //image imports
 import death from "../../assets/cards/major-arcana-cards/death.png";
 import judgement from "../../assets/cards/major-arcana-cards/judgement.png";
@@ -22,8 +21,6 @@ import theStar from "../../assets/cards/major-arcana-cards/theStar.png"
 import theTower from "../../assets/cards/major-arcana-cards/theTower.png"
 import theWorld from "../../assets/cards/major-arcana-cards/theWorld.png"
 import whellFortune from "../../assets/cards/major-arcana-cards/whellFortune.png"
-
-
 
 const mockedMajorArcanaData = {
     sampleData : [
@@ -50,5 +47,6 @@ const mockedMajorArcanaData = {
         {name:"Judgement" ,image: judgement},
         {name:"The World" ,image: theWorld}
     ]
-}
+};
+
 export default mockedMajorArcanaData;
