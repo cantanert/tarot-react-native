@@ -23,7 +23,7 @@ class MajorArcanaCards extends React.Component {
 
     itemRenderer = ({item}) => {
         return (
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate(item.route,{item:item})}>
                 <ImageBackground
                     source={item.image}
                     style={styles.imageBackgroundWrapper}

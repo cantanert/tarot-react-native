@@ -9,11 +9,11 @@ var enumStatics = {
     minorArcanaCards : "Minor Arcana Cards",
 
     //routes
-    TarotCardsRoute: "TarotCardCategories",
+    TarotCardsRoute: "TarotCards",
     MajorArcanaCardsRoute: "MajorArcanaCards",
     MinorArcanaCardsRoute: "MinorArcanaCards",
     ArticlesRoute: "Articles",
-    ArticleViewer: "ArticleViewer",
+    ArticleDetailsRoute: "ArticleDetails",
 
     //main card categories
     MajorArcana : "Major Arcana",

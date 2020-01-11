@@ -15,7 +15,7 @@ const headerHeight = viewportHeight / 3;
 const unsplashRootUrl = statics.unsplashRootUrl;
 const unsplashImageParameters = statics.unsplashImageParameters;
 
-export default class ArticleViewer extends React.Component {
+export default class ArticleDetails extends React.Component {
     render() {
         const {navigation} = this.props;
         const item = navigation.getParam("item");
@@ -25,7 +25,7 @@ export default class ArticleViewer extends React.Component {
                     source={{uri: unsplashRootUrl + item.image + unsplashImageParameters}}
                     style={styles.header}
                     imageStyle={styles.headerBackgroundImage}>
-                    <Text style={styles.headerText}>{item.title}</Text>
+                    <Text style={styles.headerText}>{item.name}</Text>
                     <View style={styles.headerBadge}/>
                 </ImageBackground>
                 <View style={styles.articleWrapper}>
@@ -55,10 +55,13 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     headerText: {
+        textAlign: "center",
         color: "white",
-        fontSize: 50,
-        fontWeight: "bold",
+        fontSize: 30,
         zIndex: 1,
+        paddingLeft: 20,
+        paddingRight: 20,
+        fontWeight: "900"
     },
     articleWrapper: {
         padding: 20

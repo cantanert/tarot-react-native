@@ -23,29 +23,29 @@ import theWorld from "../../assets/cards/major-arcana-cards/theWorld.png"
 import whellFortune from "../../assets/cards/major-arcana-cards/whellFortune.png"
 
 const mockedMajorArcanaData = {
-    sampleData : [
-        {name:"The Fool" ,image: theFool},
-        {name:"The Magician" ,image: theMagician},
-        {name:"The High Priestess" ,image: theHighPriestess},
-        {name:"The Empress" ,image: theEmpress},
-        {name:"The Emperor" ,image: theEmperor},
-        {name:"The Hierophant" ,image: theHierophant},
-        {name:"The Lovers" ,image: theLovers},
-        {name:"The Chariot" ,image: theChariot},
-        {name:"Strength" ,image: strength},
-        {name:"The Hermit" ,image: theHermit},
-        {name:"Whell Fortune" ,image: whellFortune},
-        {name:"Justice" ,image: justice},
-        {name:"The Hanged Man" ,image: theHangedMan},
-        {name:"Death" ,image: death},
-        {name:"Temperance" ,image: temperance},
-        {name:"The Devil" ,image: theDevil},
-        {name:"The Tower" ,image: theTower},
-        {name:"The Star" ,image: theStar},
-        {name:"The Moon" ,image: theMoon},
-        {name:"The Sun" ,image: theSun},
-        {name:"Judgement" ,image: judgement},
-        {name:"The World" ,image: theWorld}
+    sampleData: [
+        {name: "The Fool", image: theFool, route: "CardDetails"},
+        {name: "The Magician", image: theMagician, route: "CardDetails"},
+        {name: "The High Priestess", image: theHighPriestess, route: "CardDetails"},
+        {name: "The Empress", image: theEmpress, route: "CardDetails"},
+        {name: "The Emperor", image: theEmperor, route: "CardDetails"},
+        {name: "The Hierophant", image: theHierophant, route: "CardDetails"},
+        {name: "The Lovers", image: theLovers, route: "CardDetails"},
+        {name: "The Chariot", image: theChariot, route: "CardDetails"},
+        {name: "Strength", image: strength, route: "CardDetails"},
+        {name: "The Hermit", image: theHermit, route: "CardDetails"},
+        {name: "Whell Fortune", image: whellFortune, route: "CardDetails"},
+        {name: "Justice", image: justice, route: "CardDetails"},
+        {name: "The Hanged Man", image: theHangedMan, route: "CardDetails"},
+        {name: "Death", image: death, route: "CardDetails"},
+        {name: "Temperance", image: temperance, route: "CardDetails"},
+        {name: "The Devil", image: theDevil, route: "CardDetails"},
+        {name: "The Tower", image: theTower, route: "CardDetails"},
+        {name: "The Star", image: theStar, route: "CardDetails"},
+        {name: "The Moon", image: theMoon, route: "CardDetails"},
+        {name: "The Sun", image: theSun, route: "CardDetails"},
+        {name: "Judgement", image: judgement, route: "CardDetails"},
+        {name: "The World", image: theWorld, route: "CardDetails"}
     ]
 };
 
