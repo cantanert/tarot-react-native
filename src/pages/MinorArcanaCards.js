@@ -1,17 +1,21 @@
 import React from 'react';
 import {Dimensions, Text, TouchableOpacity, FlatList, ImageBackground, StyleSheet, View, SafeAreaView} from 'react-native'
-import mockedMajorArcanaData from "../statics/mockedMajorArcanaData";
+import statics from "../statics/enumStatics";
 
 const numColumns = 3;
 const tileWidth = Dimensions.get("window").width / numColumns;
 
+const unsplashRootUrl = statics.unsplashRootUrl;
+const unsplashImageParameters = statics.unsplashImageParameters;
+
 
 class MajorArcanaCards extends React.Component {
     render() {
+        const cardData = this.props.navigation.getParam("item");
         return (
             <View>
                 <FlatList
-                    data={mockedMajorArcanaData.sampleData}
+                    data={cardData.subCards}
                     renderItem={this.itemRenderer}
                     keyExtractor={(item) => item.name}
                     numColumns={3}
@@ -22,9 +26,9 @@ class MajorArcanaCards extends React.Component {
 
     itemRenderer = ({item}) => {
         return (
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate(item.route,{item:item})}>
                 <ImageBackground
-                    source={item.image}
+                    source={{uri: unsplashRootUrl + item.image + unsplashImageParameters}}
                     style={styles.imageBackgroundWrapper}
                     imageStyle={styles.imageBackgroundImageStyles}>
                     <Text style={styles.itemText}>{item.name}</Text>
@@ -37,7 +41,7 @@ class MajorArcanaCards extends React.Component {
 
 const styles = StyleSheet.create({
     imageBackgroundImageStyles: {
-        resizeMode: "center",
+        resizeMode: "cover",
     },
     imageBackgroundWrapper: {
         height: 200,

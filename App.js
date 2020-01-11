@@ -4,9 +4,9 @@ import Homepage from "./src/pages/Homepage";
 import TarotCards from "./src/pages/TarotCards";
 import Articles from "./src/pages/Articles";
 import MajorArcanaCards from "./src/pages/MajorArcanaCards";
+import MinorArcanaCardTypes from "./src/pages/MinorArcanaCardTypes";
 import MinorArcanaCards from "./src/pages/MinorArcanaCards";
 import ArticleDetails from "./src/pages/ArticleDetails";
-import Minor from "./src/pages/Minor";
 import CardDetails from "./src/pages/CardDetails";
 import {createAppContainer} from "react-navigation";
 import {createStackNavigator} from "react-navigation-stack";
@@ -25,10 +25,10 @@ const RootStack = createStackNavigator(
         Home: Homepage,
         TarotCards: TarotCards,
         MajorArcanaCards: MajorArcanaCards,
+        MinorArcanaCardTypes: MinorArcanaCardTypes,
         MinorArcanaCards: MinorArcanaCards,
         Articles: Articles,
         ArticleDetails: ArticleDetails,
-        Minor: Minor,
         CardDetails: CardDetails
     },
     {

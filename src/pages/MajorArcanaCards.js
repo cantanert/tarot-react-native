@@ -1,7 +1,6 @@
 import React from 'react';
 import {Dimensions, Text, TouchableOpacity, FlatList, ImageBackground, StyleSheet, View, SafeAreaView} from 'react-native'
 import mockedMajorArcanaData from "../statics/mockedMajorArcanaData";
-import statics from "../statics/enumStatics";
 
 const numColumns = 3;
 const tileWidth = Dimensions.get("window").width / numColumns;
