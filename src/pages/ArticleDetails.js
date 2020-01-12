@@ -8,6 +8,7 @@ import {
     ScrollView
 } from 'react-native';
 import statics from "../statics/enumStatics";
+import Author from "../components/Author";
 
 const viewportHeight = Dimensions.get("window").height;
 const headerHeight = viewportHeight / 3;
@@ -33,6 +34,7 @@ export default class ArticleDetails extends React.Component {
                         {item.content}
                     </Text>
                 </View>
+                <Author/>
             </ScrollView>
         );
     }
