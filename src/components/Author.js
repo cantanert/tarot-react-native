@@ -12,8 +12,8 @@ const Author = () => {
             <Image source={{uri: unsplashRootUrl + "1472099645785-5658abf4ff4e" + unsplashImageParameters}}
                    style={styles.image}/>
             <View styles={styles.infoWrapper}>
-                <Text style={styles.header}>Author</Text> {/*TODO dymanic*/}
-                <Text style={styles.text}>Lorem Ipsum</Text> {/*TODO dynamic*/}
+                <Text style={styles.header}>Author</Text>
+                <Text style={styles.text}>Lorem Ipsum</Text>
             </View>
         </View>
     );

@@ -6,7 +6,7 @@ const articles = require("../statics/mockedArticleData");
 const viewportHeight = Dimensions.get("window").height;
 const itemHeight = viewportHeight / 4;
 
-class TarotReadings extends React.Component {
+class Articles extends React.Component {
     render() {
         return (
             <MenuRenderer
@@ -19,4 +19,4 @@ class TarotReadings extends React.Component {
     }
 }
 
-export default TarotReadings;
+export default Articles;

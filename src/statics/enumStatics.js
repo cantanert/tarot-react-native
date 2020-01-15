@@ -5,6 +5,7 @@ var enumStatics = {
     //headers
     articles : "Articles",
     tarotCards : "Tarot Cards",
+    tarotReading : "Tarot Reading",
     majorArcanaCards : "Major Arcana Cards",
     minorArcanaCardTypes : "Minor Arcana Cards",
 

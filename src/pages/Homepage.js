@@ -10,7 +10,7 @@ const unsplashImageParameters = statics.unsplashImageParameters;
 export default class Homepage extends React.Component {
     render() {
         return (
-            <SafeAreaView style={styles.homepageWrapper}>
+            <View style={styles.homepageWrapper}>
                 <ImageBackground
                     source={{uri: unsplashRootUrl + "1568817864737-638432504138" + unsplashImageParameters}}
                     style={styles.imageBackgroundWrapper}
@@ -33,7 +33,18 @@ export default class Homepage extends React.Component {
                         <Text style={styles.menuText}>{statics.tarotCards}</Text>
                     </TouchableOpacity>
                 </ImageBackground>
-            </SafeAreaView>
+                <ImageBackground
+                    source={{uri: unsplashRootUrl + "1568817864737-638432504138" + unsplashImageParameters}}
+                    style={styles.imageBackgroundWrapper}
+                    imageStyle={styles.imageBackgroundImageStyles}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate("TarotReading")}
+                                      style={styles.menuItemReading}>
+                        <View style={styles.itemTextBadge}/>
+                        <Icon name="crow" style={styles.menuIcon}/>
+                        <Text style={styles.menuText}>{statics.tarotReading}</Text>
+                    </TouchableOpacity>
+                </ImageBackground>
+            </View>
         );
     }
 }
@@ -64,6 +75,13 @@ const styles = StyleSheet.create({
         width: "100%",
         alignItems: "center",
         justifyContent: "center",
+    },
+    menuItemReading:{
+        flexDirection: "row",
+        flex:1,
+        width: "100%",
+        alignItems: "center",
+        justifyContent: "center"
     },
     menuText: {
         fontSize: 30,

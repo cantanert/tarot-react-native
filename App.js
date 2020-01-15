@@ -3,6 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import Homepage from "./src/pages/Homepage";
 import TarotCards from "./src/pages/TarotCards";
 import Articles from "./src/pages/Articles";
+import TarotReading from "./src/pages/TarotReading";
 import MajorArcanaCards from "./src/pages/MajorArcanaCards";
 import MinorArcanaCardTypes from "./src/pages/MinorArcanaCardTypes";
 import MinorArcanaCards from "./src/pages/MinorArcanaCards";
@@ -28,6 +29,7 @@ const RootStack = createStackNavigator(
         MinorArcanaCardTypes: MinorArcanaCardTypes,
         MinorArcanaCards: MinorArcanaCards,
         Articles: Articles,
+        TarotReading: TarotReading,
         ArticleDetails: ArticleDetails,
         CardDetails: CardDetails
     },
