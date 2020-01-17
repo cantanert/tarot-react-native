@@ -5,7 +5,6 @@ import mockedMajorArcanaData from "../statics/mockedMajorArcanaData";
 const numColumns = 3;
 const tileWidth = Dimensions.get("window").width / numColumns;
 
-
 class MajorArcanaCards extends React.Component {
     render() {
         return (
@@ -24,7 +23,7 @@ class MajorArcanaCards extends React.Component {
         return (
             <TouchableOpacity onPress={() => this.props.navigation.navigate(item.route,{item:item})}>
                 <ImageBackground
-                    source={item.image}
+                    source={require("../../assets/cards/minor-arcana-cards/cups/king.png")}
                     style={styles.imageBackgroundWrapper}
                     imageStyle={styles.imageBackgroundImageStyles}>
                     <Text style={styles.itemText}>{item.name}</Text>

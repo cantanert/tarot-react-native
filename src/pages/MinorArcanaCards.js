@@ -28,7 +28,7 @@ class MajorArcanaCards extends React.Component {
         return (
             <TouchableOpacity onPress={() => this.props.navigation.navigate(item.route,{item:item})}>
                 <ImageBackground
-                    source={{uri: unsplashRootUrl + item.image + unsplashImageParameters}}
+                    source={require("../../assets/cards/minor-arcana-cards/cups/king.png")}
                     style={styles.imageBackgroundWrapper}
                     imageStyle={styles.imageBackgroundImageStyles}>
                     <Text style={styles.itemText}>{item.name}</Text>
