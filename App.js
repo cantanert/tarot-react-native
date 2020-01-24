@@ -17,7 +17,7 @@ export default function App() {
     console.log("App Component is working now!");
     return (
         <View style={appWrapper}>
-            <LoginPage/>
+            <AppContainer/>
         </View>
     );
 }
@@ -25,6 +25,12 @@ export default function App() {
 const RootStack = createStackNavigator(
     {
         Home: Homepage,
+        Login: {
+            screen: LoginPage,
+            navigationOptions: {
+                header: null,
+            }
+        },
         TarotCards: TarotCards,
         MajorArcanaCards: MajorArcanaCards,
         MinorArcanaCardTypes: MinorArcanaCardTypes,
@@ -35,7 +41,7 @@ const RootStack = createStackNavigator(
         CardDetails: CardDetails
     },
     {
-        initialRouteName: "Home"
+        initialRouteName: "Login"
     }
 );
 
