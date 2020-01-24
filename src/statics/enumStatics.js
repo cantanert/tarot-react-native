@@ -25,7 +25,13 @@ var enumStatics = {
         Grain: "#D7CEC7",
         Blackboard: "#565656",
         Oxblood: "#76323F",
-        Tan: "#C09F80"
+        Tan: "#C09F80",
+        //COLORS
+        // 17252a
+        // 2b7a78
+        // 3aafa9
+        // DEF2f1
+        // FeFFFF
     }
 };
 

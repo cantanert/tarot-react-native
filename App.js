@@ -11,12 +11,13 @@ import ArticleDetails from "./src/pages/ArticleDetails";
 import CardDetails from "./src/pages/CardDetails";
 import {createAppContainer} from "react-navigation";
 import {createStackNavigator} from "react-navigation-stack";
+import LoginPage from "./src/pages/LoginPage";
 
 export default function App() {
     console.log("App Component is working now!");
     return (
         <View style={appWrapper}>
-            <AppContainer/>
+            <LoginPage/>
         </View>
     );
 }
