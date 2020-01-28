@@ -6,6 +6,7 @@ var enumStatics = {
     articles : "Articles",
     tarotCards : "Tarot Cards",
     tarotReading : "Tarot Reading",
+    coffeeReading : "Coffee Reading",
     majorArcanaCards : "Major Arcana Cards",
     minorArcanaCardTypes : "Minor Arcana Cards",
 

@@ -44,6 +44,17 @@ export default class Homepage extends React.Component {
                         <Text style={styles.menuText}>{statics.tarotReading}</Text>
                     </TouchableOpacity>
                 </ImageBackground>
+                <ImageBackground
+                    source={{uri: unsplashRootUrl + "1566346289644-4e9c3dce657d" + unsplashImageParameters}}
+                    style={styles.imageBackgroundWrapper}
+                    imageStyle={styles.imageBackgroundImageStyles}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate("Camera")}
+                                      style={styles.menuItemReading}>
+                        <View style={styles.itemTextBadge}/>
+                        <Icon name="camera-retro" style={styles.menuIcon}/>
+                        <Text style={styles.menuText}>{statics.coffeeReading}</Text>
+                    </TouchableOpacity>
+                </ImageBackground>
             </View>
         );
     }
