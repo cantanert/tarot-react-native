@@ -9,7 +9,7 @@ import MinorArcanaCardTypes from "./src/pages/MinorArcanaCardTypes";
 import MinorArcanaCards from "./src/pages/MinorArcanaCards";
 import ArticleDetails from "./src/pages/ArticleDetails";
 import CardDetails from "./src/pages/CardDetails";
-import Camera from "./src/pages/Camera";
+import CameraPage from "./src/pages/CameraPage";
 import {createAppContainer} from "react-navigation";
 import {createStackNavigator} from "react-navigation-stack";
 import LoginPage from "./src/pages/LoginPage";
@@ -29,10 +29,10 @@ const RootStack = createStackNavigator(
         Login: {
             screen: LoginPage,
             navigationOptions: {
-                header: null,
+                headerShown: false,
             }
         },
-        Camera: Camera,
+        CameraPage: CameraPage,
         TarotCards: TarotCards,
         MajorArcanaCards: MajorArcanaCards,
         MinorArcanaCardTypes: MinorArcanaCardTypes,
