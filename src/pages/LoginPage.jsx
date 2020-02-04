@@ -1,13 +1,13 @@
 import React from "react";
 import {View, Text, StyleSheet, Image, TextInput} from "react-native";
-import {Button} from "react-native-elements"
+import {Button} from "react-native-elements";
 
 export default class LoginPage extends React.Component {
     render() {
         return (
             <View style={styles.page}>
                 <View style={styles.logoImageWrapper}>
-                    <Image style={styles.logoImage} source={require("../../assets/logo.png")}/>
+                    <Image style={styles.logoImage} source={require("../../assets/images/logo.png")}/>
                 </View>
                 <View style={styles.loginForm}>
                     <View style={{flex: 1, justifyContent: "center"}}>

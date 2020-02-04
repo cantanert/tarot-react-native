@@ -7,6 +7,7 @@ import {
     ImageBackground,
     ScrollView
 } from 'react-native';
+import * as Font from 'expo-font';
 import statics from "../statics/enumStatics";
 import Author from "../components/Author";
 
@@ -17,6 +18,13 @@ const unsplashRootUrl = statics.unsplashRootUrl;
 const unsplashImageParameters = statics.unsplashImageParameters;
 
 export default class ArticleDetails extends React.Component {
+
+    async componentDidMount() {
+        await Font.loadAsync({
+            'AdventPro-medium': require('../../assets/fonts/AdventPro-Medium.ttf'),
+        });
+    }
+
     render() {
         const {navigation} = this.props;
         const item = navigation.getParam("item");
@@ -70,5 +78,6 @@ const styles = StyleSheet.create({
     },
     articleContent: {
         fontSize: 16,
+        fontFamily: "AdventPro-medium"
     }
 });
